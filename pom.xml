@@ -13,6 +13,11 @@
         <version>7</version>
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
     <name>basictools</name>
     <description>basictools</description>
     <url>https://github.com/xuegangliu/basicTools</url>
@@ -57,7 +62,7 @@
                 </configuration>
             </plugin>
             <!--打包源码-->
-<!--            <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
@@ -68,12 +73,16 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
             <!--打包文档注释-->
-<!--            <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
+                <version>3.0.1</version>
+                <configuration>
+                    <charset>UTF-8</charset>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -82,7 +91,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
             <!--gpg加密-->
 <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
